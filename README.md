@@ -10,14 +10,6 @@ First, install Package into your project using the Composer package manager:
 composer require eldegweydev/coupon
 ```
 
-## Publishing Service Provider
-
-Next, you should publish the package files using the vendor:publish Artisan command:
-
-```bash
-php artisan vendor:publish --provider="Eldegweydev\Coupon\CouponServiceProvider"
-```
-
 ## Run migrations
 
 Finally, run database migration

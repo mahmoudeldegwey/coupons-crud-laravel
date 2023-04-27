@@ -31,8 +31,7 @@ class CouponController extends Controller
                 'end' => $request->end,
                 'max_use' => $request->max_use,
                 'type' => $request->type,
-                'amount' => $request->amount,
-                'num_of_use' => $request->num_of_use
+                'amount' => $request->amount
             ]);
 
         } catch (\Exception $e) {
@@ -58,8 +57,7 @@ class CouponController extends Controller
                 'end' => $request->end,
                 'max_use' => $request->max_use,
                 'type' => $request->type,
-                'amount' => $request->amount,
-                'num_of_use' => $request->num_of_use
+                'amount' => $request->amount
             ]);
 
         } catch (\Exception $e) {

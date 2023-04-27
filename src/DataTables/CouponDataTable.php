@@ -25,6 +25,9 @@ class CouponDataTable extends DataTable
             ->editColumn('start', function ($query) {
                 return date('Y-m-d', strtotime($query->start)) ;
             })
+            ->editColumn('type', function ($query) {
+                return ucfirst($query->type) ;
+            })
             ->editColumn('end', function ($query) {
                 return date('Y-m-d', strtotime($query->start)) ;
             })            
@@ -95,6 +98,11 @@ class CouponDataTable extends DataTable
                 'name' => 'end',
                 'data' => 'end',
                 'title' => 'End Date'
+            ],
+            [
+                'name' => 'type',
+                'data' => 'type',
+                'title' => 'Type'
             ],
             Column::computed('action')
               ->exportable(false)

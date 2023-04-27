@@ -23,6 +23,7 @@ class CreateCouponTable extends Migration
             $table->enum('type',['percentage','fixed']);
             $table->integer('amount');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

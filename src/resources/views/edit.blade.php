@@ -6,8 +6,9 @@
   <h2>Edit Coupon #{{ $coupon->code }}</h2>
 </div>
 
-<form method="POST" action="{{ route('coupons.store') }}">
+<form method="POST" action="{{ route('coupons.update',$coupon->id) }}">
     @csrf
+  {{ method_field('PUT') }}
    <div class="row">
       <div class="col-md-6">
         <div class="form-group">
@@ -30,7 +31,6 @@
       <div class="col-md-6">
         <div class="form-group">
           <label >Start At</label>
-          {{ $coupon->start }}
           <input type="text" name="start" class="date form-control" value="{{ $coupon->start }}">
         </div>
 

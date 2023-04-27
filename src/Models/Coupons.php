@@ -10,7 +10,7 @@ class Coupons extends Eloquent
 
     protected $table = 'coupons';
 
-    protected $fillable = ['name','code','start','end','max_use','type','amount','status','num_of_use'];
+    protected $fillable = ['name','code','start','end','max_use','type','amount','status'];
 
     protected $dates = [
         'created_at',

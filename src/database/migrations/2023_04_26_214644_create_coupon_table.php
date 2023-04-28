@@ -19,7 +19,8 @@ class CreateCouponTable extends Migration
             $table->string('code',20);
             $table->date('start');
             $table->date('end');
-            $table->string('max_use',100);
+            $table->integer('max_use');
+            $table->integer('num_of_use')->default('0');
             $table->enum('type',['percentage','fixed']);
             $table->integer('amount');
             $table->timestamps();

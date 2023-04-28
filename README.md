@@ -31,3 +31,19 @@ Can access the coupons routes from this table
 | GET		| edit   	| /coupons/{coupon}/edit  |
 | PUT		| update   	| /coupons/{coupon}  |
 | DELETE	| destroy   | /coupons/{coupon}  |
+
+
+## Usage 
+
+To use the Verify coupon code and apply the discount , you can use the provided Trait Coupon, it has two functions one for check the coupon is active and second to apply the coupon discount 
+
+```bash
+use Eldegweydev\Coupon\Http\Traits\CouponTrait
+
+use CouponTrait;
+
+$this->checkCouponIsActive($code,$select = ['*']);
+
+$this->calculateCouponDiscount($code,$total_price);
+
+```

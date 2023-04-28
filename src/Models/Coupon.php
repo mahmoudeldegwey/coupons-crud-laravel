@@ -4,7 +4,7 @@ namespace Eldegweydev\Coupon\Models;
 use Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Coupons extends Eloquent
+class Coupon extends Eloquent
 {
     use SoftDeletes;
 
@@ -19,5 +19,4 @@ class Coupons extends Eloquent
         'end',
         'start'
     ];
-
 }

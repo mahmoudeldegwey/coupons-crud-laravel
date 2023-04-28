@@ -5,7 +5,7 @@ use Eldegweydev\Coupon\Http\Requests\CouponRequest;
 use Eldegweydev\Coupon\DataTables\CouponDataTable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Eldegweydev\Coupon\Models\Coupons;
+use Eldegweydev\Coupon\Models\Coupon;
 
 class CouponController extends Controller
 {
@@ -24,7 +24,7 @@ class CouponController extends Controller
     {
         try {
             
-            Coupons::create([
+            Coupon::create([
                 'name' => $request->name,
                 'code' => $request->code,
                 'start' => $request->start,
@@ -41,7 +41,7 @@ class CouponController extends Controller
         return redirect()->route('coupons.index');
     }
 
-    public function edit(Coupons $coupon)
+    public function edit(Coupon $coupon)
     {
         return view('coupons::edit',compact('coupon'));
     }
@@ -50,7 +50,7 @@ class CouponController extends Controller
     {
         try {
             
-            Coupons::where('id',$id)->update([
+            Coupon::where('id',$id)->update([
                 'name' => $request->name,
                 'code' => $request->code,
                 'start' => $request->start,
@@ -71,7 +71,7 @@ class CouponController extends Controller
 
     public function destroy($id)
     {
-        Coupons::destroy($id);
+        Coupon::destroy($id);
 
         return redirect()->route('coupons.index');
     }

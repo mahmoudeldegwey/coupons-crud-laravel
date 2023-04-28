@@ -7,7 +7,7 @@ use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
-use Eldegweydev\Coupon\Models\Coupons;
+use Eldegweydev\Coupon\Models\Coupon;
 
 class CouponDataTable extends DataTable
 {
@@ -40,7 +40,7 @@ class CouponDataTable extends DataTable
      * @param \App\App\CouponDataTable $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Coupons $model)
+    public function query(Coupon $model)
     {
         return $model->select(['coupons.*'])->orderBy('id','DESC');
     }

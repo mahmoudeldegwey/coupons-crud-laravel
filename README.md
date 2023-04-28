@@ -35,7 +35,7 @@ Can access the coupons routes from this table
 
 ## Usage 
 
-To use the Verify coupon code and apply the discount , you can use the provided Trait Coupon, it has two functions one for check the coupon is active and second to apply the coupon discount 
+To verify coupon code and apply the discount , you can use the provided Trait Coupon, it has two functions one for check the coupon is active and second to apply the coupon discount 
 
 ```bash
 use Eldegweydev\Coupon\Http\Traits\CouponTrait
